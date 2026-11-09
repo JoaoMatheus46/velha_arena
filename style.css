@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+:root{--bg:#090d18;--panel:#111a2b;--panel2:#151f33;--line:rgba(164,183,220,.13);--muted:#8997b2;--text:#f4f7ff;--purple:#8b7cff;--cyan:#55d6d0;--red:#ff718d}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 50% 0%,#1a2340 0%,#0d1424 42%,var(--bg) 78%);color:var(--text);font-family:'DM Sans',sans-serif}
+a{color:inherit;text-decoration:none}
+button{font:inherit}
+.home-page{display:grid;place-items:center;padding:28px}
+.home-card{width:min(100%,760px);text-align:center;padding:48px 42px 34px;background:linear-gradient(145deg,rgba(24,35,58,.96),rgba(14,22,39,.96));border:1px solid var(--line);border-radius:30px;box-shadow:0 28px 90px #0007;position:relative;overflow:hidden}
+.home-card:before{content:"";position:absolute;width:380px;height:380px;border-radius:50%;background:#786aff18;filter:blur(50px);top:-210px;left:calc(50% - 190px);pointer-events:none}
+.brand{display:flex;align-items:center;justify-content:center;gap:10px;font:700 15px 'Space Grotesk',sans-serif;letter-spacing:2px;position:relative}
+.brand-icon{font-size:24px;letter-spacing:-8px;padding-right:8px;color:var(--purple)}
+.brand-accent{color:var(--cyan)}
+.hero-mark{width:190px;height:190px;margin:40px auto 32px;display:grid;grid-template-columns:repeat(3,1fr);gap:7px;transform:rotate(-5deg)}
+.hero-mark span{display:grid;place-items:center;background:#ffffff08;border:1px solid #ffffff12;border-radius:15px;color:var(--purple);font:700 42px 'Space Grotesk';box-shadow:inset 0 0 20px #ffffff05}
+.hero-mark span:nth-child(even){color:var(--cyan)}
+.eyebrow{font-size:10px;letter-spacing:2.5px;font-weight:800;color:var(--cyan);margin:0 0 12px}
+h1{font:700 clamp(34px,6vw,54px)/1.08 'Space Grotesk',sans-serif;letter-spacing:-2px;margin:0}
+h1 span{color:var(--purple)}
+.intro{max-width:460px;margin:18px auto 28px;color:var(--muted);line-height:1.7;font-size:15px}
+.primary-button{display:inline-flex;align-items:center;justify-content:center;gap:26px;padding:16px 25px;border:0;border-radius:13px;background:linear-gradient(110deg,#8172ff,#6e63e9);color:white;font-size:12px;font-weight:800;letter-spacing:1px;box-shadow:0 10px 30px #7569ff35;cursor:pointer;transition:.2s}
+.primary-button:hover{transform:translateY(-2px);filter:brightness(1.1)}
+.primary-button span{font-size:18px}
+.home-footer{display:flex;align-items:center;justify-content:center;gap:13px;flex-wrap:wrap;margin-top:42px;color:#71809e;font-size:9px;letter-spacing:1.3px;font-weight:700}
+.home-footer i{width:4px;height:4px;border-radius:50%;background:var(--cyan)}
+.selection-wrap,.game-wrap{width:min(100% - 36px,900px);margin:0 auto;padding:34px 0 45px}
+.back-link{display:inline-block;color:var(--muted);font-size:12px;font-weight:600;margin-bottom:32px;transition:.2s}
+.back-link:hover{color:white}
+.small-brand{margin-bottom:34px;justify-content:flex-start}
+.selection-wrap>.eyebrow,.selection-wrap>h1,.selection-wrap>.intro{text-align:center}
+.centered{margin-top:12px}
+.difficulty-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:38px}
+.difficulty-card{min-height:255px;padding:25px 20px;background:linear-gradient(145deg,#172239,#111a2b);border:1px solid var(--line);border-radius:19px;color:var(--text);text-align:left;display:flex;flex-direction:column;align-items:flex-start;cursor:pointer;transition:.2s}
+.difficulty-card:hover,.difficulty-card:focus-visible{transform:translateY(-5px);border-color:#8b7cff99;outline:none;box-shadow:0 15px 40px #0004}
+.difficulty-card.featured{border-color:#8172ff88;background:linear-gradient(145deg,#25254a,#151d33)}
+.level-icon{font-size:27px;margin-bottom:22px}
+.level-name{font:700 23px 'Space Grotesk';margin-bottom:10px}
+.level-desc{font-size:12px;line-height:1.7;color:var(--muted);min-height:62px}
+.level-tag{font-size:9px;letter-spacing:1.4px;font-weight:800;color:var(--cyan);margin-top:auto;padding-top:16px}
+.selection-hint{text-align:center;color:var(--muted);font-size:12px;margin-top:28px}
+.x-text{color:var(--purple)}.o-text{color:var(--cyan)}
+.game-header{display:flex;align-items:center;justify-content:space-between;gap:15px;margin-bottom:30px}
+.game-header .back-link{margin:0}
+.game-header .small-brand{margin:0}
+.level-indicator{font-size:9px;letter-spacing:1.3px;color:var(--cyan);border:1px solid #55d6d044;padding:9px 12px;border-radius:30px;font-weight:800}
+.scoreboard{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:24px}
+.score-card{background:linear-gradient(145deg,#172239,#111a2b);border:1px solid var(--line);border-radius:15px;padding:15px 18px;display:grid;grid-template-columns:1fr auto;align-items:center}
+.score-symbol{grid-column:1;grid-row:1;color:var(--purple);font-size:17px;font-weight:800}
+.ai-score .score-symbol{color:var(--cyan)}.draw-score .score-symbol{color:#b7c1d6}
+.score-label{grid-column:1;grid-row:2;font-size:9px;letter-spacing:1.4px;color:var(--muted);font-weight:800;margin-top:6px}
+.score-card strong{grid-column:2;grid-row:1/3;font:700 29px 'Space Grotesk'}
+.arena{background:linear-gradient(145deg,rgba(22,33,54,.98),rgba(15,24,41,.98));border:1px solid var(--line);border-radius:23px;padding:27px;box-shadow:0 20px 60px #0003}
+.turn-row{display:flex;justify-content:space-between;align-items:center;gap:15px}
+.turn-row h1{font-size:27px;letter-spacing:-1px}
+.turn-row .eyebrow{font-size:9px}
+.moves-box{min-width:76px;text-align:center;padding:10px 13px;background:#ffffff08;border:1px solid var(--line);border-radius:12px}
+.moves-box strong{display:block;font:700 23px 'Space Grotesk'}
+.moves-box span{font-size:8px;letter-spacing:1.3px;color:var(--muted);font-weight:800}
+.status-pill{width:fit-content;max-width:100%;margin:22px auto 18px;padding:10px 15px;border-radius:30px;background:#ffffff08;color:#c2cce0;font-size:11px;text-align:center}
+.status-dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--cyan);margin-right:8px;box-shadow:0 0 10px var(--cyan)}
+.board{width:min(100%,390px);aspect-ratio:1;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:9px}
+.cell{border:1px solid #ffffff13;border-radius:16px;background:linear-gradient(145deg,#1b2942,#131e32);display:grid;place-items:center;color:var(--purple);font:700 clamp(38px,9vw,65px) 'Space Grotesk';cursor:pointer;transition:.15s;aspect-ratio:1}
+.cell:hover:empty{background:#263653;border-color:#8b7cff77}
+.cell:disabled{cursor:default}
+.cell.o{color:var(--cyan)}.cell.winner{background:#7569ff2b;border-color:var(--purple);box-shadow:0 0 25px #7569ff30}
+.game-actions{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:23px}
+.compact{padding:13px 19px;font-size:10px;gap:0}
+.secondary-button{padding:13px 18px;border:1px solid var(--line);border-radius:12px;background:#ffffff08;color:#bdc7dc;font-size:10px;font-weight:800;letter-spacing:1px;cursor:pointer;transition:.2s}
+.secondary-button:hover{background:#ffffff13;color:white}
+.game-footer{text-align:center;color:#74819b;font-size:9px;letter-spacing:1.2px;font-weight:700;margin-top:22px}
+.game-footer span{padding:0 7px;color:#4c5870}
+@media(max-width:650px){.home-card{padding:35px 20px 25px}.hero-mark{width:155px;height:155px;margin:32px auto 28px}.hero-mark span{font-size:34px}.home-footer{gap:8px;font-size:8px}.difficulty-grid{grid-template-columns:1fr;gap:10px;margin-top:25px}.difficulty-card{min-height:0;padding:18px;display:grid;grid-template-columns:42px 1fr;column-gap:12px}.level-icon{grid-row:1/3;margin:0;align-self:center}.level-name{font-size:19px;margin:0}.level-desc{grid-column:2;min-height:0;margin-top:5px}.level-tag{grid-column:2;padding-top:12px}.game-wrap{width:min(100% - 24px,520px);padding-top:22px}.game-header{flex-wrap:wrap}.game-header .small-brand{order:-1;width:100%;justify-content:center;margin-bottom:10px}.game-header .back-link{margin:0}.level-indicator{margin-left:auto}.scoreboard{gap:7px}.score-card{padding:12px 10px}.score-card strong{font-size:24px}.score-label{font-size:8px}.arena{padding:20px 13px}.turn-row h1{font-size:22px}.board{gap:7px}.cell{border-radius:12px}.game-footer{line-height:2}}
+@media(max-width:370px){.score-card{padding:10px 7px}.score-card strong{font-size:21px}.score-symbol{font-size:14px}.score-label{letter-spacing:.8px}.game-actions>*{width:100%}}
